@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="NmC-18-a6S">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -17,6 +18,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.69999998807907104" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car_bg" translatesAutoresizingMaskIntoConstraints="NO" id="zdN-f7-Yca">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Jc-7K-812">
                                 <rect key="frame" x="16" y="235" width="568" height="130"/>
                                 <subviews>
@@ -59,15 +63,20 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.47450980392156861" green="0.74117647058823533" blue="0.60392156862745094" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="6Jc-7K-812" secondAttribute="centerY" id="3nu-B8-jvn"/>
+                            <constraint firstItem="zdN-f7-Yca" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="Lz3-XL-P9I"/>
+                            <constraint firstItem="zdN-f7-Yca" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="QGG-RJ-tGr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zdN-f7-Yca" secondAttribute="trailing" constant="-16" id="beN-8f-gx9"/>
                             <constraint firstItem="6Jc-7K-812" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="bgP-Wb-qd2"/>
                             <constraint firstItem="6Jc-7K-812" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="lWT-mX-3Nw"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="zdN-f7-Yca" secondAttribute="bottom" id="wEN-aD-x8r"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="sAF-xU-UEX"/>
                     <connections>
+                        <outlet property="centerView" destination="6Jc-7K-812" id="9jJ-FG-QsA"/>
                         <segue destination="lEa-ZI-cor" kind="custom" identifier="login" customClass="PushNoAnimationSegue" id="vsh-BC-mB2"/>
                     </connections>
                 </viewController>
@@ -87,16 +96,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car_bg" translatesAutoresizingMaskIntoConstraints="NO" id="mlI-Wy-HGc">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QqW-cr-g0n">
                                 <rect key="frame" x="16" y="171" width="568" height="257"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, Tobi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cLg-he-msm">
-                                        <rect key="frame" x="8" y="216" width="552" height="21"/>
+                                        <rect key="frame" x="8" y="216" width="552" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="21" id="mWl-Ud-Ddt"/>
+                                            <constraint firstAttribute="height" constant="30" id="mWl-Ud-Ddt"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tobi.png" translatesAutoresizingMaskIntoConstraints="NO" id="ABn-IY-ZkA">
@@ -118,15 +130,20 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.47450980390000003" green="0.74117647060000003" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="mlI-Wy-HGc" firstAttribute="top" secondItem="7O5-n1-vYv" secondAttribute="topMargin" id="2QO-ja-UQN"/>
+                            <constraint firstItem="Z30-k7-kJx" firstAttribute="top" secondItem="mlI-Wy-HGc" secondAttribute="bottom" id="Y94-6Q-iqv"/>
+                            <constraint firstItem="mlI-Wy-HGc" firstAttribute="leading" secondItem="7O5-n1-vYv" secondAttribute="leadingMargin" constant="-16" id="hOL-OD-pdu"/>
                             <constraint firstItem="QqW-cr-g0n" firstAttribute="trailing" secondItem="7O5-n1-vYv" secondAttribute="trailingMargin" id="jZG-cU-lEF"/>
                             <constraint firstAttribute="centerY" secondItem="QqW-cr-g0n" secondAttribute="centerY" id="o5V-rM-qk9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mlI-Wy-HGc" secondAttribute="trailing" constant="-16" id="tor-mc-owq"/>
                             <constraint firstItem="QqW-cr-g0n" firstAttribute="leading" secondItem="7O5-n1-vYv" secondAttribute="leadingMargin" id="yyg-IM-GWq"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="image" destination="ABn-IY-ZkA" id="em4-OX-YR1"/>
+                        <outlet property="bg" destination="mlI-Wy-HGc" id="roh-9y-J24"/>
+                        <outlet property="image" destination="ABn-IY-ZkA" id="40T-uk-nIZ"/>
                         <outlet property="label" destination="cLg-he-msm" id="9mx-3s-Ed1"/>
                         <segue destination="3Rd-Lk-mEU" kind="custom" identifier="next" customClass="PushNoAnimationSegue" id="mX5-ns-2N1"/>
                     </connections>
@@ -147,20 +164,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car_bg" translatesAutoresizingMaskIntoConstraints="NO" id="Ne3-e5-a8u">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9yd-dM-qzw">
                                 <rect key="frame" x="0.0" y="0.0" width="300" height="600"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j2Y-Fi-V8p">
-                                        <rect key="frame" x="50" y="200" width="200" height="200"/>
+                                        <rect key="frame" x="50" y="250" width="200" height="100"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="200" id="Bi9-2s-bdr"/>
-                                            <constraint firstAttribute="width" constant="200" id="Te6-mb-qYF"/>
+                                            <constraint firstAttribute="height" constant="100" id="Bi9-2s-bdr"/>
+                                            <constraint firstAttribute="width" secondItem="j2Y-Fi-V8p" secondAttribute="height" multiplier="2:1" id="Ohm-we-oIS"/>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="Te6-mb-qYF"/>
                                         </constraints>
-                                        <state key="normal" title="Button" image="barchart.png">
+                                        <state key="normal" title="Button" image="car">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Bi9-2s-bdr"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
-                                            <action selector="tabBar:" destination="3Rd-Lk-mEU" eventType="touchUpInside" id="8Ot-Ns-kGE"/>
+                                            <action selector="tapSteer:" destination="3Rd-Lk-mEU" eventType="touchUpInside" id="Eps-1x-xb4"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -168,61 +194,79 @@
                                 <constraints>
                                     <constraint firstAttribute="centerX" secondItem="j2Y-Fi-V8p" secondAttribute="centerX" id="A71-1y-7G4"/>
                                     <constraint firstAttribute="centerY" secondItem="j2Y-Fi-V8p" secondAttribute="centerY" id="aeQ-TD-LnH"/>
+                                    <constraint firstItem="j2Y-Fi-V8p" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="9yd-dM-qzw" secondAttribute="leading" constant="8" id="azO-vD-mO6"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="j2Y-Fi-V8p" secondAttribute="trailing" constant="8" id="rVl-hx-KzR"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KS5-Ul-9eJ">
                                 <rect key="frame" x="300" y="0.0" width="300" height="600"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s4I-7F-4PV">
-                                        <rect key="frame" x="50" y="200" width="200" height="200"/>
+                                        <rect key="frame" x="50" y="250" width="200" height="100"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="200" id="DMP-uH-kPL"/>
-                                            <constraint firstAttribute="width" constant="200" id="jVT-P3-6Z7"/>
+                                            <constraint firstAttribute="height" constant="100" id="DMP-uH-kPL"/>
+                                            <constraint firstAttribute="width" secondItem="s4I-7F-4PV" secondAttribute="height" multiplier="2:1" id="btT-XU-AFd"/>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="jVT-P3-6Z7"/>
                                         </constraints>
-                                        <state key="normal" title="Button" image="steer.png">
+                                        <state key="normal" title="Button" image="statistic">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="DMP-uH-kPL"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <action selector="tabBar:" destination="3Rd-Lk-mEU" eventType="touchUpInside" id="uau-Xs-4XT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kTo-3u-CGP">
+                                        <rect key="frame" x="166" y="552" width="126" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="126" id="0Tf-mS-oLq"/>
+                                            <constraint firstAttribute="height" constant="40" id="eGH-il-XA8"/>
+                                        </constraints>
+                                        <state key="normal" title="Logout" backgroundImage="button-bg">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="tapSteer:" destination="3Rd-Lk-mEU" eventType="touchUpInside" id="Wyb-rZ-EOP"/>
+                                            <action selector="logut:" destination="3Rd-Lk-mEU" eventType="touchUpInside" id="go4-Sr-CuF"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="s4I-7F-4PV" secondAttribute="trailing" constant="8" id="KtM-M5-V6A"/>
                                     <constraint firstAttribute="centerX" secondItem="s4I-7F-4PV" secondAttribute="centerX" id="SNJ-40-fKZ"/>
+                                    <constraint firstItem="s4I-7F-4PV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="KS5-Ul-9eJ" secondAttribute="leading" constant="8" id="SWv-90-6Ar"/>
+                                    <constraint firstAttribute="trailing" secondItem="kTo-3u-CGP" secondAttribute="trailing" constant="8" id="Sk2-GB-wKF"/>
+                                    <constraint firstAttribute="bottom" secondItem="kTo-3u-CGP" secondAttribute="bottom" constant="8" id="mVx-2i-Ayp"/>
                                     <constraint firstAttribute="centerY" secondItem="s4I-7F-4PV" secondAttribute="centerY" id="qV1-9c-8Lr"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kTo-3u-CGP">
-                                <rect key="frame" x="16" y="552" width="568" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="eGH-il-XA8"/>
-                                </constraints>
-                                <state key="normal" title="Logout" backgroundImage="button-bg">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="logut:" destination="3Rd-Lk-mEU" eventType="touchUpInside" id="go4-Sr-CuF"/>
-                                </connections>
-                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.47450980390000003" green="0.74117647060000003" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="KS5-Ul-9eJ" firstAttribute="top" secondItem="56c-u2-FeT" secondAttribute="topMargin" id="2MZ-DQ-RhV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ne3-e5-a8u" secondAttribute="trailing" constant="-16" id="7fN-Qb-jkZ"/>
                             <constraint firstItem="KS5-Ul-9eJ" firstAttribute="leading" secondItem="9yd-dM-qzw" secondAttribute="trailing" id="9EZ-5f-c2v"/>
+                            <constraint firstItem="Ne3-e5-a8u" firstAttribute="leading" secondItem="56c-u2-FeT" secondAttribute="leadingMargin" constant="-16" id="GxW-Il-V8u"/>
+                            <constraint firstItem="Ne3-e5-a8u" firstAttribute="top" secondItem="56c-u2-FeT" secondAttribute="topMargin" id="Ljg-1W-fU2"/>
                             <constraint firstItem="sc2-WQ-O6b" firstAttribute="top" secondItem="9yd-dM-qzw" secondAttribute="bottom" id="M48-Z7-uHv"/>
                             <constraint firstItem="sc2-WQ-O6b" firstAttribute="top" secondItem="KS5-Ul-9eJ" secondAttribute="bottom" id="Osk-4N-2sw"/>
-                            <constraint firstItem="kTo-3u-CGP" firstAttribute="trailing" secondItem="56c-u2-FeT" secondAttribute="trailingMargin" id="OyT-Zt-ui2"/>
-                            <constraint firstItem="sc2-WQ-O6b" firstAttribute="top" secondItem="kTo-3u-CGP" secondAttribute="bottom" constant="8" id="WvP-nV-ET6"/>
                             <constraint firstAttribute="trailingMargin" secondItem="KS5-Ul-9eJ" secondAttribute="trailing" constant="-16" id="XE4-cm-d3T"/>
                             <constraint firstItem="9yd-dM-qzw" firstAttribute="top" secondItem="56c-u2-FeT" secondAttribute="topMargin" id="ay5-T7-fa8"/>
                             <constraint firstItem="9yd-dM-qzw" firstAttribute="leading" secondItem="56c-u2-FeT" secondAttribute="leadingMargin" constant="-16" id="dpH-Qz-SDo"/>
                             <constraint firstItem="9yd-dM-qzw" firstAttribute="width" secondItem="KS5-Ul-9eJ" secondAttribute="width" id="hfu-x2-pSr"/>
-                            <constraint firstItem="kTo-3u-CGP" firstAttribute="leading" secondItem="56c-u2-FeT" secondAttribute="leadingMargin" id="ql4-IK-M0i"/>
+                            <constraint firstItem="sc2-WQ-O6b" firstAttribute="top" secondItem="Ne3-e5-a8u" secondAttribute="bottom" id="sPs-XH-2Mq"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="carIcon" destination="j2Y-Fi-V8p" id="P1j-lE-8Ka"/>
+                        <outlet property="iamge" destination="Ne3-e5-a8u" id="kFS-ab-j5S"/>
+                        <outlet property="logoutButton" destination="kTo-3u-CGP" id="xn0-mA-LhN"/>
+                        <outlet property="statIcon" destination="s4I-7F-4PV" id="851-Kq-f4m"/>
                         <segue destination="uFD-aD-qTw" kind="custom" identifier="showStatistic" customClass="PushNoAnimationSegue" id="TXw-vy-Yoh"/>
                         <segue destination="LKH-aR-N1B" kind="custom" identifier="showLiveView" customClass="PushNoAnimationSegue" id="huJ-4C-jwg"/>
                         <segue destination="NTF-zd-ZQU" kind="unwind" identifier="logout" unwindAction="unwindLogin:" id="GO9-K1-khc"/>
@@ -401,9 +445,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="barchart.png" width="500" height="500"/>
         <image name="button-bg" width="17" height="17"/>
-        <image name="steer.png" width="500" height="500"/>
+        <image name="car" width="200" height="100"/>
+        <image name="car_bg" width="2801" height="1498"/>
+        <image name="statistic" width="200" height="100"/>
         <image name="tobi.png" width="500" height="500"/>
     </resources>
 </document>

@@ -11,11 +11,18 @@
 @interface HelloViewController ()
 @property (strong, nonatomic) IBOutlet UIImageView *image;
 @property (strong, nonatomic) IBOutlet UILabel *label;
+@property (strong, nonatomic) IBOutlet UIImageView *bg;
 
 
 @end
 
 @implementation HelloViewController
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+//    self.bg.contentMode =UIViewContentModeScaleAspectFill;
+}
 
 - (void)viewDidAppear:(BOOL)animated
 {
@@ -45,7 +52,7 @@
 
 - (void)toNextView
 {
-    [UIView animateWithDuration:0.25
+    [UIView animateWithDuration:0.5
                           delay:1.0
                         options:UIViewAnimationOptionCurveEaseOut
                      animations:^{

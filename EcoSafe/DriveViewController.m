@@ -15,8 +15,8 @@
 @implementation DriveViewController
 
 - (IBAction)endDrive:(id)sender {
+    // send end Drive
     [self performSegueWithIdentifier:@"showDriveStats" sender:self];
 }
-
 
 @end
