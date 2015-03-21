@@ -26,6 +26,10 @@
 		50FA8CFC1ABDC28C0052D53A /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50FA8CFB1ABDC28C0052D53A /* MobileCoreServices.framework */; };
 		50FA8CFE1ABDC29E0052D53A /* MySpinServerSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50FA8CFD1ABDC29E0052D53A /* MySpinServerSDK.framework */; };
 		50FA8D001ABDD0240052D53A /* tobi.png in Resources */ = {isa = PBXBuildFile; fileRef = 50FA8CFF1ABDD0230052D53A /* tobi.png */; };
+		50FA8D031ABDD5DD0052D53A /* HelloViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50FA8D021ABDD5DD0052D53A /* HelloViewController.m */; };
+		50FA8D061ABDDBED0052D53A /* barchart.png in Resources */ = {isa = PBXBuildFile; fileRef = 50FA8D041ABDDBED0052D53A /* barchart.png */; };
+		50FA8D071ABDDBED0052D53A /* steer.png in Resources */ = {isa = PBXBuildFile; fileRef = 50FA8D051ABDDBED0052D53A /* steer.png */; };
+		50FA8D0A1ABDDC140052D53A /* OverviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50FA8D091ABDDC140052D53A /* OverviewViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +68,12 @@
 		50FA8CFB1ABDC28C0052D53A /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		50FA8CFD1ABDC29E0052D53A /* MySpinServerSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MySpinServerSDK.framework; sourceTree = "<group>"; };
 		50FA8CFF1ABDD0230052D53A /* tobi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tobi.png; sourceTree = "<group>"; };
+		50FA8D011ABDD5DD0052D53A /* HelloViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelloViewController.h; sourceTree = "<group>"; };
+		50FA8D021ABDD5DD0052D53A /* HelloViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelloViewController.m; sourceTree = "<group>"; };
+		50FA8D041ABDDBED0052D53A /* barchart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barchart.png; sourceTree = "<group>"; };
+		50FA8D051ABDDBED0052D53A /* steer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = steer.png; sourceTree = "<group>"; };
+		50FA8D081ABDDC140052D53A /* OverviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverviewViewController.h; sourceTree = "<group>"; };
+		50FA8D091ABDDC140052D53A /* OverviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverviewViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,10 +141,16 @@
 				50FA8CC81ABDC2130052D53A /* AppDelegate.m */,
 				50FA8CCA1ABDC2130052D53A /* ViewController.h */,
 				50FA8CCB1ABDC2130052D53A /* ViewController.m */,
+				50FA8D011ABDD5DD0052D53A /* HelloViewController.h */,
+				50FA8D021ABDD5DD0052D53A /* HelloViewController.m */,
+				50FA8D081ABDDC140052D53A /* OverviewViewController.h */,
+				50FA8D091ABDDC140052D53A /* OverviewViewController.m */,
 				50FA8CCD1ABDC2130052D53A /* Main.storyboard */,
 				50FA8CD01ABDC2130052D53A /* Images.xcassets */,
 				50FA8CD21ABDC2130052D53A /* LaunchScreen.xib */,
 				50FA8CFF1ABDD0230052D53A /* tobi.png */,
+				50FA8D041ABDDBED0052D53A /* barchart.png */,
+				50FA8D051ABDDBED0052D53A /* steer.png */,
 				50FA8CC31ABDC2130052D53A /* Supporting Files */,
 			);
 			path = EcoSafe;
@@ -247,7 +263,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				50FA8CCF1ABDC2130052D53A /* Main.storyboard in Resources */,
+				50FA8D071ABDDBED0052D53A /* steer.png in Resources */,
 				50FA8D001ABDD0240052D53A /* tobi.png in Resources */,
+				50FA8D061ABDDBED0052D53A /* barchart.png in Resources */,
 				50FA8CD41ABDC2130052D53A /* LaunchScreen.xib in Resources */,
 				50FA8CD11ABDC2130052D53A /* Images.xcassets in Resources */,
 			);
@@ -270,6 +288,8 @@
 				50FA8CCC1ABDC2130052D53A /* ViewController.m in Sources */,
 				50FA8CC91ABDC2130052D53A /* AppDelegate.m in Sources */,
 				50FA8CC61ABDC2130052D53A /* main.m in Sources */,
+				50FA8D031ABDD5DD0052D53A /* HelloViewController.m in Sources */,
+				50FA8D0A1ABDDC140052D53A /* OverviewViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
