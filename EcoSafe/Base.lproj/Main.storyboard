@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="NmC-18-a6S">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -66,12 +66,14 @@
                             <constraint firstItem="6Jc-7K-812" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="lWT-mX-3Nw"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="sAF-xU-UEX"/>
                     <connections>
-                        <segue destination="lEa-ZI-cor" kind="show" identifier="login" id="vsh-BC-mB2"/>
+                        <segue destination="lEa-ZI-cor" kind="custom" identifier="login" customClass="PushNoAnimationSegue" id="vsh-BC-mB2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1057" y="265"/>
         </scene>
         <!--Hello View Controller-->
         <scene sceneID="vVx-GN-KBL">
@@ -126,12 +128,12 @@
                     <connections>
                         <outlet property="image" destination="ABn-IY-ZkA" id="em4-OX-YR1"/>
                         <outlet property="label" destination="cLg-he-msm" id="9mx-3s-Ed1"/>
-                        <segue destination="3Rd-Lk-mEU" kind="show" identifier="next" id="mX5-ns-2N1"/>
+                        <segue destination="3Rd-Lk-mEU" kind="custom" identifier="next" customClass="PushNoAnimationSegue" id="mX5-ns-2N1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AVQ-Gr-zy5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1060" y="337"/>
+            <point key="canvasLocation" x="1872" y="337"/>
         </scene>
         <!--Overview View Controller-->
         <scene sceneID="5qD-Nx-vh1">
@@ -221,15 +223,15 @@
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="uFD-aD-qTw" kind="show" identifier="showStatistic" id="TXw-vy-Yoh"/>
-                        <segue destination="LKH-aR-N1B" kind="show" identifier="showLiveView" id="huJ-4C-jwg"/>
+                        <segue destination="uFD-aD-qTw" kind="custom" identifier="showStatistic" customClass="PushNoAnimationSegue" id="TXw-vy-Yoh"/>
+                        <segue destination="LKH-aR-N1B" kind="custom" identifier="showLiveView" customClass="PushNoAnimationSegue" id="huJ-4C-jwg"/>
                         <segue destination="NTF-zd-ZQU" kind="unwind" identifier="logout" unwindAction="unwindLogin:" id="GO9-K1-khc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EMq-DU-dki" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="NTF-zd-ZQU" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1791" y="337"/>
+            <point key="canvasLocation" x="2603" y="337"/>
         </scene>
         <!--Statistic View Controller-->
         <scene sceneID="1RD-Vg-LKb">
@@ -282,7 +284,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="US4-aj-pxC" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="MbJ-bu-R83" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2584" y="190"/>
+            <point key="canvasLocation" x="3396" y="190"/>
         </scene>
         <!--Drive View Controller-->
         <scene sceneID="ffW-GO-WiC">
@@ -327,12 +329,12 @@
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="hxw-q4-nLu" kind="show" identifier="showDriveStats" id="aof-bJ-Pk4"/>
+                        <segue destination="hxw-q4-nLu" kind="custom" identifier="showDriveStats" customClass="PushNoAnimationSegue" id="aof-bJ-Pk4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fxf-Ci-HhJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2584" y="849"/>
+            <point key="canvasLocation" x="3396" y="849"/>
         </scene>
         <!--Drive Stat View Controller-->
         <scene sceneID="dvP-p6-uWf">
@@ -376,7 +378,26 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8gf-Q3-8tY" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="IlB-6e-z7f" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3339" y="849"/>
+            <point key="canvasLocation" x="4151" y="849"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gND-xS-msf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="NmC-18-a6S" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fCh-0n-a2b">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="mdy-N8-Ows"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j0Q-za-lEv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="205" y="265"/>
         </scene>
     </scenes>
     <resources>

@@ -33,6 +33,7 @@
 		50FA8D0D1ABE022A0052D53A /* DriveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50FA8D0C1ABE022A0052D53A /* DriveViewController.m */; };
 		50FA8D101ABE03600052D53A /* DriveStatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50FA8D0F1ABE03600052D53A /* DriveStatViewController.m */; };
 		50FA8D131ABE06700052D53A /* StatisticViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50FA8D121ABE06700052D53A /* StatisticViewController.m */; };
+		50FA8D161ABE0E210052D53A /* PushNoAnimationSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 50FA8D151ABE0E210052D53A /* PushNoAnimationSegue.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,8 @@
 		50FA8D0F1ABE03600052D53A /* DriveStatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DriveStatViewController.m; sourceTree = "<group>"; };
 		50FA8D111ABE06700052D53A /* StatisticViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatisticViewController.h; sourceTree = "<group>"; };
 		50FA8D121ABE06700052D53A /* StatisticViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatisticViewController.m; sourceTree = "<group>"; };
+		50FA8D141ABE0E210052D53A /* PushNoAnimationSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushNoAnimationSegue.h; sourceTree = "<group>"; };
+		50FA8D151ABE0E210052D53A /* PushNoAnimationSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushNoAnimationSegue.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +163,8 @@
 				50FA8D0F1ABE03600052D53A /* DriveStatViewController.m */,
 				50FA8D111ABE06700052D53A /* StatisticViewController.h */,
 				50FA8D121ABE06700052D53A /* StatisticViewController.m */,
+				50FA8D141ABE0E210052D53A /* PushNoAnimationSegue.h */,
+				50FA8D151ABE0E210052D53A /* PushNoAnimationSegue.m */,
 				50FA8CCD1ABDC2130052D53A /* Main.storyboard */,
 				50FA8CD01ABDC2130052D53A /* Images.xcassets */,
 				50FA8CD21ABDC2130052D53A /* LaunchScreen.xib */,
@@ -308,6 +313,7 @@
 				50FA8D0A1ABDDC140052D53A /* OverviewViewController.m in Sources */,
 				50FA8D101ABE03600052D53A /* DriveStatViewController.m in Sources */,
 				50FA8D0D1ABE022A0052D53A /* DriveViewController.m in Sources */,
+				50FA8D161ABE0E210052D53A /* PushNoAnimationSegue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
