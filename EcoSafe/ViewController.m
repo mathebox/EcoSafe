@@ -28,7 +28,7 @@
     [self performSegueWithIdentifier:@"login" sender:self];
 }
 
-- (IBAction)unwindToThisViewController:(UIStoryboardSegue *)unwindSegue
+- (IBAction)unwindLogin:(UIStoryboardSegue *)unwindSegue
 {
     // do nothing
 }

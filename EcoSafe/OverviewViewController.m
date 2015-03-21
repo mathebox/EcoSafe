@@ -40,5 +40,10 @@
     [self performSegueWithIdentifier:@"logout" sender:self];
 }
 
+- (IBAction)unwindToOverview:(UIStoryboardSegue *)unwindSegue
+{
+    // do nothing
+}
+
 
 @end

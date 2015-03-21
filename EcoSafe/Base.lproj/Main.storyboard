@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Jc-7K-812">
-                                <rect key="frame" x="16" y="240" width="568" height="120"/>
+                                <rect key="frame" x="16" y="235" width="568" height="130"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="user name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="283-d5-rew">
                                         <rect key="frame" x="8" y="8" width="552" height="30"/>
@@ -31,8 +31,12 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8G9-df-fmb">
-                                        <rect key="frame" x="8" y="84" width="552" height="30"/>
-                                        <state key="normal" title="Login">
+                                        <rect key="frame" x="8" y="84" width="552" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="F8Y-R5-pag"/>
+                                        </constraints>
+                                        <state key="normal" title="Login" backgroundImage="button-bg">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -45,7 +49,7 @@
                                     <constraint firstItem="283-d5-rew" firstAttribute="leading" secondItem="6Jc-7K-812" secondAttribute="leading" constant="8" id="6Pd-Ze-fqI"/>
                                     <constraint firstAttribute="trailing" secondItem="283-d5-rew" secondAttribute="trailing" constant="8" id="8Hd-wv-LLu"/>
                                     <constraint firstAttribute="trailing" secondItem="og9-am-zi3" secondAttribute="trailing" constant="8" id="HId-tI-nvG"/>
-                                    <constraint firstAttribute="height" constant="120" id="Kbl-Xf-L2Z"/>
+                                    <constraint firstAttribute="height" constant="130" id="Kbl-Xf-L2Z"/>
                                     <constraint firstItem="8G9-df-fmb" firstAttribute="top" secondItem="6Jc-7K-812" secondAttribute="top" constant="84" id="OhJ-Mc-upc"/>
                                     <constraint firstAttribute="trailing" secondItem="8G9-df-fmb" secondAttribute="trailing" constant="8" id="OjU-Y0-vRw"/>
                                     <constraint firstItem="og9-am-zi3" firstAttribute="top" secondItem="6Jc-7K-812" secondAttribute="top" constant="46" id="WqR-Hu-1ag"/>
@@ -188,11 +192,12 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kTo-3u-CGP">
-                                <rect key="frame" x="16" y="562" width="568" height="30"/>
+                                <rect key="frame" x="16" y="552" width="568" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="eGH-il-XA8"/>
+                                    <constraint firstAttribute="height" constant="40" id="eGH-il-XA8"/>
                                 </constraints>
-                                <state key="normal" title="Logout">
+                                <state key="normal" title="Logout" backgroundImage="button-bg">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -218,7 +223,7 @@
                     <connections>
                         <segue destination="uFD-aD-qTw" kind="show" identifier="showStatistic" id="TXw-vy-Yoh"/>
                         <segue destination="LKH-aR-N1B" kind="show" identifier="showLiveView" id="huJ-4C-jwg"/>
-                        <segue destination="NTF-zd-ZQU" kind="unwind" identifier="logout" unwindAction="unwindToThisViewController:" id="Rtq-GB-Kvb"/>
+                        <segue destination="NTF-zd-ZQU" kind="unwind" identifier="logout" unwindAction="unwindLogin:" id="GO9-K1-khc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EMq-DU-dki" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -226,10 +231,10 @@
             </objects>
             <point key="canvasLocation" x="1791" y="337"/>
         </scene>
-        <!--View Controller-->
+        <!--Statistic View Controller-->
         <scene sceneID="1RD-Vg-LKb">
             <objects>
-                <viewController id="uFD-aD-qTw" sceneMemberID="viewController">
+                <viewController id="uFD-aD-qTw" customClass="StatisticViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tQ9-Th-FYP"/>
                         <viewControllerLayoutGuide type="bottom" id="kFj-ks-o60"/>
@@ -244,22 +249,45 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Thh-lq-6PP">
+                                <rect key="frame" x="16" y="552" width="568" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="xgC-Ky-tod"/>
+                                </constraints>
+                                <state key="normal" title="Back to Overview" backgroundImage="button-bg">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="backToOverview:" destination="hxw-q4-nLu" eventType="touchUpInside" id="0QU-oh-Zag"/>
+                                    <action selector="endDrive:" destination="LKH-aR-N1B" eventType="touchUpInside" id="Xlx-VB-Iut"/>
+                                    <action selector="logut:" destination="3Rd-Lk-mEU" eventType="touchUpInside" id="fu2-gc-SIc"/>
+                                    <action selector="toOverview:" destination="uFD-aD-qTw" eventType="touchUpInside" id="miO-hp-Vfn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.47450980390000003" green="0.74117647060000003" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="kFj-ks-o60" firstAttribute="top" secondItem="Thh-lq-6PP" secondAttribute="bottom" constant="8" id="FmT-SH-z5a"/>
+                            <constraint firstItem="Thh-lq-6PP" firstAttribute="trailing" secondItem="1YU-Xp-buU" secondAttribute="trailingMargin" id="NMg-zS-wzr"/>
                             <constraint firstAttribute="centerY" secondItem="U4J-N0-FQ3" secondAttribute="centerY" constant="0.5" id="kfm-ji-e9Y"/>
+                            <constraint firstItem="Thh-lq-6PP" firstAttribute="leading" secondItem="1YU-Xp-buU" secondAttribute="leadingMargin" id="vF1-FV-iFC"/>
                             <constraint firstAttribute="centerX" secondItem="U4J-N0-FQ3" secondAttribute="centerX" id="wu7-SH-S6H"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="MbJ-bu-R83" kind="unwind" identifier="toOverview" unwindAction="unwindToOverview:" id="Uw2-1f-6D2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="US4-aj-pxC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="MbJ-bu-R83" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2584" y="190"/>
         </scene>
-        <!--View Controller-->
+        <!--Drive View Controller-->
         <scene sceneID="ffW-GO-WiC">
             <objects>
-                <viewController id="LKH-aR-N1B" sceneMemberID="viewController">
+                <viewController id="LKH-aR-N1B" customClass="DriveViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Xik-in-fcK"/>
                         <viewControllerLayoutGuide type="bottom" id="Wn2-HR-9Oi"/>
@@ -274,21 +302,86 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cDE-cs-RNW">
+                                <rect key="frame" x="16" y="552" width="568" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="J2P-QF-riX"/>
+                                </constraints>
+                                <state key="normal" title="End Drive" backgroundImage="button-bg">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="endDrive:" destination="LKH-aR-N1B" eventType="touchUpInside" id="yR5-Hg-LYV"/>
+                                    <action selector="logut:" destination="3Rd-Lk-mEU" eventType="touchUpInside" id="Lbx-OV-X9g"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.47450980390000003" green="0.74117647060000003" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="cDE-cs-RNW" firstAttribute="trailing" secondItem="8SS-GN-gEa" secondAttribute="trailingMargin" id="130-s9-MoZ"/>
                             <constraint firstAttribute="centerX" secondItem="uGJ-Av-fiL" secondAttribute="centerX" id="8LO-el-D7G"/>
                             <constraint firstAttribute="centerY" secondItem="uGJ-Av-fiL" secondAttribute="centerY" constant="0.5" id="VYz-Ip-yiV"/>
+                            <constraint firstItem="Wn2-HR-9Oi" firstAttribute="top" secondItem="cDE-cs-RNW" secondAttribute="bottom" constant="8" id="sHo-Fk-AKq"/>
+                            <constraint firstItem="cDE-cs-RNW" firstAttribute="leading" secondItem="8SS-GN-gEa" secondAttribute="leadingMargin" id="wwV-vM-20V"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="hxw-q4-nLu" kind="show" identifier="showDriveStats" id="aof-bJ-Pk4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fxf-Ci-HhJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2584" y="849"/>
         </scene>
+        <!--Drive Stat View Controller-->
+        <scene sceneID="dvP-p6-uWf">
+            <objects>
+                <viewController id="hxw-q4-nLu" customClass="DriveStatViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Iqd-Fh-TJw"/>
+                        <viewControllerLayoutGuide type="bottom" id="V2J-6x-VZa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="E0e-PJ-qXR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Soa-E3-2Pb">
+                                <rect key="frame" x="16" y="552" width="568" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="UtM-Qe-n4Z"/>
+                                </constraints>
+                                <state key="normal" title="Back to Overview" backgroundImage="button-bg">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="backToOverview:" destination="hxw-q4-nLu" eventType="touchUpInside" id="gKE-Wf-RoZ"/>
+                                    <action selector="endDrive:" destination="LKH-aR-N1B" eventType="touchUpInside" id="ump-Ee-EJf"/>
+                                    <action selector="logut:" destination="3Rd-Lk-mEU" eventType="touchUpInside" id="lpe-oY-MdC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.47450980390000003" green="0.74117647060000003" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="V2J-6x-VZa" firstAttribute="top" secondItem="Soa-E3-2Pb" secondAttribute="bottom" constant="8" id="Wp5-VK-zcA"/>
+                            <constraint firstItem="Soa-E3-2Pb" firstAttribute="trailing" secondItem="E0e-PJ-qXR" secondAttribute="trailingMargin" id="brS-rL-QpN"/>
+                            <constraint firstItem="Soa-E3-2Pb" firstAttribute="leading" secondItem="E0e-PJ-qXR" secondAttribute="leadingMargin" id="qmX-xV-83e"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="IlB-6e-z7f" kind="unwind" identifier="toOverview" unwindAction="unwindToOverview:" id="WXv-1M-z5Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8gf-Q3-8tY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="IlB-6e-z7f" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="3339" y="849"/>
+        </scene>
     </scenes>
     <resources>
         <image name="barchart.png" width="500" height="500"/>
+        <image name="button-bg" width="17" height="17"/>
         <image name="steer.png" width="500" height="500"/>
         <image name="tobi.png" width="500" height="500"/>
     </resources>

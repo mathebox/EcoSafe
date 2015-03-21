@@ -30,6 +30,9 @@
 		50FA8D061ABDDBED0052D53A /* barchart.png in Resources */ = {isa = PBXBuildFile; fileRef = 50FA8D041ABDDBED0052D53A /* barchart.png */; };
 		50FA8D071ABDDBED0052D53A /* steer.png in Resources */ = {isa = PBXBuildFile; fileRef = 50FA8D051ABDDBED0052D53A /* steer.png */; };
 		50FA8D0A1ABDDC140052D53A /* OverviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50FA8D091ABDDC140052D53A /* OverviewViewController.m */; };
+		50FA8D0D1ABE022A0052D53A /* DriveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50FA8D0C1ABE022A0052D53A /* DriveViewController.m */; };
+		50FA8D101ABE03600052D53A /* DriveStatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50FA8D0F1ABE03600052D53A /* DriveStatViewController.m */; };
+		50FA8D131ABE06700052D53A /* StatisticViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50FA8D121ABE06700052D53A /* StatisticViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +77,12 @@
 		50FA8D051ABDDBED0052D53A /* steer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = steer.png; sourceTree = "<group>"; };
 		50FA8D081ABDDC140052D53A /* OverviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverviewViewController.h; sourceTree = "<group>"; };
 		50FA8D091ABDDC140052D53A /* OverviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverviewViewController.m; sourceTree = "<group>"; };
+		50FA8D0B1ABE022A0052D53A /* DriveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DriveViewController.h; sourceTree = "<group>"; };
+		50FA8D0C1ABE022A0052D53A /* DriveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DriveViewController.m; sourceTree = "<group>"; };
+		50FA8D0E1ABE03600052D53A /* DriveStatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DriveStatViewController.h; sourceTree = "<group>"; };
+		50FA8D0F1ABE03600052D53A /* DriveStatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DriveStatViewController.m; sourceTree = "<group>"; };
+		50FA8D111ABE06700052D53A /* StatisticViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatisticViewController.h; sourceTree = "<group>"; };
+		50FA8D121ABE06700052D53A /* StatisticViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatisticViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +154,12 @@
 				50FA8D021ABDD5DD0052D53A /* HelloViewController.m */,
 				50FA8D081ABDDC140052D53A /* OverviewViewController.h */,
 				50FA8D091ABDDC140052D53A /* OverviewViewController.m */,
+				50FA8D0B1ABE022A0052D53A /* DriveViewController.h */,
+				50FA8D0C1ABE022A0052D53A /* DriveViewController.m */,
+				50FA8D0E1ABE03600052D53A /* DriveStatViewController.h */,
+				50FA8D0F1ABE03600052D53A /* DriveStatViewController.m */,
+				50FA8D111ABE06700052D53A /* StatisticViewController.h */,
+				50FA8D121ABE06700052D53A /* StatisticViewController.m */,
 				50FA8CCD1ABDC2130052D53A /* Main.storyboard */,
 				50FA8CD01ABDC2130052D53A /* Images.xcassets */,
 				50FA8CD21ABDC2130052D53A /* LaunchScreen.xib */,
@@ -288,8 +303,11 @@
 				50FA8CCC1ABDC2130052D53A /* ViewController.m in Sources */,
 				50FA8CC91ABDC2130052D53A /* AppDelegate.m in Sources */,
 				50FA8CC61ABDC2130052D53A /* main.m in Sources */,
+				50FA8D131ABE06700052D53A /* StatisticViewController.m in Sources */,
 				50FA8D031ABDD5DD0052D53A /* HelloViewController.m in Sources */,
 				50FA8D0A1ABDDC140052D53A /* OverviewViewController.m in Sources */,
+				50FA8D101ABE03600052D53A /* DriveStatViewController.m in Sources */,
+				50FA8D0D1ABE022A0052D53A /* DriveViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
