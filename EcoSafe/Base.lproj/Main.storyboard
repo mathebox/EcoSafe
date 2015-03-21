@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Jc-7K-812">
+                                <rect key="frame" x="16" y="240" width="568" height="120"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="user name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="283-d5-rew">
+                                        <rect key="frame" x="8" y="8" width="552" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="og9-am-zi3">
+                                        <rect key="frame" x="8" y="46" width="552" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8G9-df-fmb">
+                                        <rect key="frame" x="8" y="84" width="552" height="30"/>
+                                        <state key="normal" title="Login">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="login:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="KuI-f9-epb"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="283-d5-rew" firstAttribute="leading" secondItem="6Jc-7K-812" secondAttribute="leading" constant="8" id="6Pd-Ze-fqI"/>
+                                    <constraint firstAttribute="trailing" secondItem="283-d5-rew" secondAttribute="trailing" constant="8" id="8Hd-wv-LLu"/>
+                                    <constraint firstAttribute="trailing" secondItem="og9-am-zi3" secondAttribute="trailing" constant="8" id="HId-tI-nvG"/>
+                                    <constraint firstAttribute="height" constant="120" id="Kbl-Xf-L2Z"/>
+                                    <constraint firstItem="8G9-df-fmb" firstAttribute="top" secondItem="6Jc-7K-812" secondAttribute="top" constant="84" id="OhJ-Mc-upc"/>
+                                    <constraint firstAttribute="trailing" secondItem="8G9-df-fmb" secondAttribute="trailing" constant="8" id="OjU-Y0-vRw"/>
+                                    <constraint firstItem="og9-am-zi3" firstAttribute="top" secondItem="6Jc-7K-812" secondAttribute="top" constant="46" id="WqR-Hu-1ag"/>
+                                    <constraint firstItem="283-d5-rew" firstAttribute="top" secondItem="6Jc-7K-812" secondAttribute="top" constant="8" id="eSt-HT-D25"/>
+                                    <constraint firstItem="8G9-df-fmb" firstAttribute="leading" secondItem="6Jc-7K-812" secondAttribute="leading" constant="8" id="oaO-jk-B0W"/>
+                                    <constraint firstItem="og9-am-zi3" firstAttribute="leading" secondItem="6Jc-7K-812" secondAttribute="leading" constant="8" id="ut6-bX-2iU"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.47450980392156861" green="0.74117647058823533" blue="0.60392156862745094" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="6Jc-7K-812" secondAttribute="centerY" id="3nu-B8-jvn"/>
+                            <constraint firstItem="6Jc-7K-812" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="bgP-Wb-qd2"/>
+                            <constraint firstItem="6Jc-7K-812" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="lWT-mX-3Nw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="lEa-ZI-cor" kind="show" identifier="login" id="vsh-BC-mB2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="vVx-GN-KBL">
+            <objects>
+                <viewController id="lEa-ZI-cor" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wlf-yl-9O4"/>
+                        <viewControllerLayoutGuide type="bottom" id="Z30-k7-kJx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7O5-n1-vYv">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QqW-cr-g0n">
+                                <rect key="frame" x="16" y="171" width="568" height="257"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, Tobi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cLg-he-msm">
+                                        <rect key="frame" x="8" y="216" width="552" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="mWl-Ud-Ddt"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tobi.png" translatesAutoresizingMaskIntoConstraints="NO" id="ABn-IY-ZkA">
+                                        <rect key="frame" x="184" y="8" width="200" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="Bdz-2p-Gpr"/>
+                                            <constraint firstAttribute="height" constant="200" id="PNu-hB-fbU"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="257" id="0Xq-0u-aIP"/>
+                                    <constraint firstItem="ABn-IY-ZkA" firstAttribute="top" secondItem="QqW-cr-g0n" secondAttribute="top" constant="8" id="CHs-hL-386"/>
+                                    <constraint firstItem="cLg-he-msm" firstAttribute="top" secondItem="QqW-cr-g0n" secondAttribute="top" constant="216" id="MUY-Vg-vii"/>
+                                    <constraint firstItem="cLg-he-msm" firstAttribute="leading" secondItem="QqW-cr-g0n" secondAttribute="leading" constant="8" id="bNL-qz-YVB"/>
+                                    <constraint firstAttribute="trailing" secondItem="cLg-he-msm" secondAttribute="trailing" constant="8" id="dFN-L8-pH7"/>
+                                    <constraint firstAttribute="centerX" secondItem="ABn-IY-ZkA" secondAttribute="centerX" id="mGW-am-hWw"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.47450980390000003" green="0.74117647060000003" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="QqW-cr-g0n" firstAttribute="trailing" secondItem="7O5-n1-vYv" secondAttribute="trailingMargin" id="jZG-cU-lEF"/>
+                            <constraint firstAttribute="centerY" secondItem="QqW-cr-g0n" secondAttribute="centerY" id="o5V-rM-qk9"/>
+                            <constraint firstItem="QqW-cr-g0n" firstAttribute="leading" secondItem="7O5-n1-vYv" secondAttribute="leadingMargin" id="yyg-IM-GWq"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AVQ-Gr-zy5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="962" y="265"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tobi.png" width="500" height="500"/>
+    </resources>
+</document>
