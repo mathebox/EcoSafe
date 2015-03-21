@@ -36,5 +36,9 @@
     [self performSegueWithIdentifier:@"showLiveView" sender:self];
 }
 
+- (IBAction)logut:(id)sender {
+    [self performSegueWithIdentifier:@"logout" sender:self];
+}
+
 
 @end
