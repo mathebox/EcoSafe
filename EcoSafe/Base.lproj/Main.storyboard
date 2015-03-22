@@ -191,10 +191,18 @@
                                             <action selector="tapSteer:" destination="3Rd-Lk-mEU" eventType="touchUpInside" id="Eps-1x-xb4"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Ride" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PMn-o7-6zf">
+                                        <rect key="frame" x="111" y="358" width="77" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="centerX" secondItem="j2Y-Fi-V8p" secondAttribute="centerX" id="A71-1y-7G4"/>
+                                    <constraint firstItem="j2Y-Fi-V8p" firstAttribute="centerX" secondItem="PMn-o7-6zf" secondAttribute="centerX" id="A8R-Lf-3L5"/>
+                                    <constraint firstItem="PMn-o7-6zf" firstAttribute="top" secondItem="j2Y-Fi-V8p" secondAttribute="bottom" constant="8" id="ZcD-8h-aZ1"/>
                                     <constraint firstAttribute="centerY" secondItem="j2Y-Fi-V8p" secondAttribute="centerY" id="aeQ-TD-LnH"/>
                                     <constraint firstItem="j2Y-Fi-V8p" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="9yd-dM-qzw" secondAttribute="leading" constant="8" id="azO-vD-mO6"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="j2Y-Fi-V8p" secondAttribute="trailing" constant="8" id="rVl-hx-KzR"/>
@@ -236,6 +244,12 @@
                                             <action selector="logut:" destination="3Rd-Lk-mEU" eventType="touchUpInside" id="go4-Sr-CuF"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="See Statistics" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C4x-d3-BIW">
+                                        <rect key="frame" x="97.5" y="358" width="105" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -243,8 +257,10 @@
                                     <constraint firstAttribute="centerX" secondItem="s4I-7F-4PV" secondAttribute="centerX" id="SNJ-40-fKZ"/>
                                     <constraint firstItem="s4I-7F-4PV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="KS5-Ul-9eJ" secondAttribute="leading" constant="8" id="SWv-90-6Ar"/>
                                     <constraint firstAttribute="trailing" secondItem="kTo-3u-CGP" secondAttribute="trailing" constant="8" id="Sk2-GB-wKF"/>
+                                    <constraint firstItem="C4x-d3-BIW" firstAttribute="top" secondItem="s4I-7F-4PV" secondAttribute="bottom" constant="8" id="TVK-Fb-uxB"/>
                                     <constraint firstAttribute="bottom" secondItem="kTo-3u-CGP" secondAttribute="bottom" constant="8" id="mVx-2i-Ayp"/>
                                     <constraint firstAttribute="centerY" secondItem="s4I-7F-4PV" secondAttribute="centerY" id="qV1-9c-8Lr"/>
+                                    <constraint firstItem="C4x-d3-BIW" firstAttribute="centerX" secondItem="s4I-7F-4PV" secondAttribute="centerX" id="uVS-Bz-vx2"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -266,9 +282,11 @@
                     </view>
                     <connections>
                         <outlet property="carIcon" destination="j2Y-Fi-V8p" id="P1j-lE-8Ka"/>
+                        <outlet property="carLabel" destination="PMn-o7-6zf" id="7Db-cF-da2"/>
                         <outlet property="iamge" destination="Ne3-e5-a8u" id="kFS-ab-j5S"/>
                         <outlet property="logoutButton" destination="kTo-3u-CGP" id="xn0-mA-LhN"/>
                         <outlet property="statIcon" destination="s4I-7F-4PV" id="851-Kq-f4m"/>
+                        <outlet property="statLabel" destination="C4x-d3-BIW" id="XOO-EM-EIq"/>
                         <segue destination="uFD-aD-qTw" kind="custom" identifier="showStatistic" customClass="PushNoAnimationSegue" id="TXw-vy-Yoh"/>
                         <segue destination="LKH-aR-N1B" kind="custom" identifier="showLiveView" customClass="PushNoAnimationSegue" id="huJ-4C-jwg"/>
                         <segue destination="NTF-zd-ZQU" kind="unwind" identifier="logout" unwindAction="unwindLogin:" id="GO9-K1-khc"/>

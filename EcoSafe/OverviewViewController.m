@@ -10,7 +10,9 @@
 
 @interface OverviewViewController ()
 @property (strong, nonatomic) IBOutlet UIButton *carIcon;
+@property (strong, nonatomic) IBOutlet UILabel *carLabel;
 @property (strong, nonatomic) IBOutlet UIButton *statIcon;
+@property (strong, nonatomic) IBOutlet UILabel *statLabel;
 @property (strong, nonatomic) IBOutlet UIButton *logoutButton;
 @property (strong, nonatomic) IBOutlet UIImageView *iamge;
 
@@ -28,7 +30,9 @@
 {
     [super viewWillAppear:animated];
     self.carIcon.alpha = 0.0;
+    self.carLabel.alpha = 0.0;
     self.statIcon.alpha = 0.0;
+    self.statLabel.alpha = 0.0;
     self.logoutButton.alpha = 0.0;
 }
 
@@ -47,7 +51,9 @@
                         options:UIViewAnimationOptionCurveEaseIn
                      animations:^{
                          self.carIcon.alpha = 1.0;
+                         self.carLabel.alpha = 1.0;
                          self.statIcon.alpha = 1.0;
+                         self.statLabel.alpha = 1.0;
                      } completion:^(BOOL finished) {
                         [self showLogoutButton];
                      }
