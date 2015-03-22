@@ -172,21 +172,21 @@ typedef NS_ENUM(NSUInteger, EventType) {
 - (NSString *)imageNameForEventType:(NSNumber *)type
 {
     if (type.integerValue == 0) {
-        return @"steer.png";
+        return @"event-accelerate";
     } else if (type.integerValue == 1) {
-        return @"steer.png";
+        return @"event-brake";
     } else if (type.integerValue == 2) {
-        return @"steer.png";
+        return @"event-idle";
     } else if (type.integerValue == 3) {
-        return @"steer.png";
+        return @"event-distance";
     } else if (type.integerValue == 4) {
-        return @"steer.png";
+        return @"event-turn";
     } else if (type.integerValue == 5) {
-        return @"steer.png";
+        return @"event-fast";
     } else if (type.integerValue == 6) {
-        return @"steer.png";
+        return @"event-jam";
     } else if (type.integerValue == 7) {
-        return @"steer.png";
+        return @"event-slow";
     } else {
         return @"";
     }
