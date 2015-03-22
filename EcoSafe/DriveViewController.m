@@ -7,6 +7,7 @@
 //
 
 #import "DriveViewController.h"
+#import "Networker.h"
 
 typedef NS_ENUM(NSUInteger, EventType) {
     EventTypeAcceleration = 0,
@@ -40,6 +41,8 @@ typedef NS_ENUM(NSUInteger, EventType) {
 
 @property (strong, nonatomic) NSArray *lastEvents;
 
+@property (strong, nonatomic) NSTimer *timer;
+
 @end
 
 @implementation DriveViewController
@@ -60,17 +63,37 @@ typedef NS_ENUM(NSUInteger, EventType) {
 //        UIGraphicsEndImageContext();
 //        UIColor *color = [UIColor colorWithPatternImage:image];
 
-        view.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.75];
+        view.hidden = YES;
     }];
 
-    [self newEvent:[NSNumber numberWithInt:1]];
-    [self newEvent:[NSNumber numberWithInt:2]];
-    [self newEvent:[NSNumber numberWithInt:3]];
-    [self newEvent:[NSNumber numberWithInt:4]];
+    [Networker startRide];
+
+    self.timer = [NSTimer timerWithTimeInterval:1.0
+                                         target:self
+                                       selector:@selector(updateEvents)
+                                       userInfo:nil
+                                        repeats:YES];
+    NSRunLoop *runner = [NSRunLoop currentRunLoop];
+    [runner addTimer:self.timer forMode: NSDefaultRunLoopMode];
+}
+
+- (void)updateEvents
+{
+    NSArray *updates = [Networker eventUpdate];
+//    NSLog(@"%@, %@", updates, [updates[0] class]);
+
+    for (int i = 0; i < updates.count; i++) {
+        NSNumber *update = updates[i];
+        if (update.boolValue) {
+            NSLog(@"YES %d", i);
+            [self newEvent:[NSNumber numberWithInt:i]];
+        }
+    }
 }
 
 - (IBAction)endDrive:(id)sender {
-    // send end Drive
+    [self.timer invalidate];
+    [Networker endRide];
     [self performSegueWithIdentifier:@"showDriveStats" sender:self];
 }
 
@@ -86,7 +109,12 @@ typedef NS_ENUM(NSUInteger, EventType) {
         self.lastEvents = @[type];
     }
 
-    [self updateViews];
+    NSLog(@"%@", self.lastEvents);
+
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self updateViews];
+    });
+
 }
 
 - (void)updateViews
@@ -94,11 +122,11 @@ typedef NS_ENUM(NSUInteger, EventType) {
     for (int i = 0; i < self.lastEvents.count; i++ ) {
         ((UILabel *)self.titles[self.lastEvents.count-i-1]).text = [self titleForEventType:self.lastEvents[i]];
         ((UIImageView *)self.imageViews[self.lastEvents.count-i-1]).image = [UIImage imageNamed:[self imageNameForEventType:self.lastEvents[i]]];
-        ((UIView *)self.alertViews[self.lastEvents.count-i-1]).hidden = false;
+        ((UIView *)self.alertViews[self.lastEvents.count-i-1]).hidden = NO;
     }
 
     for (int i = self.lastEvents.count; i < 3; i++) {
-        ((UIView *)self.alertViews[i]).hidden = true;
+        ((UIView *)self.alertViews[i]).hidden = YES;
     }
 }
 

@@ -32,6 +32,7 @@
 		50FA8D101ABE03600052D53A /* DriveStatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50FA8D0F1ABE03600052D53A /* DriveStatViewController.m */; };
 		50FA8D131ABE06700052D53A /* StatisticViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50FA8D121ABE06700052D53A /* StatisticViewController.m */; };
 		50FA8D161ABE0E210052D53A /* PushNoAnimationSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 50FA8D151ABE0E210052D53A /* PushNoAnimationSegue.m */; };
+		50FA8D211ABE597E0052D53A /* Networker.m in Sources */ = {isa = PBXBuildFile; fileRef = 50FA8D201ABE597E0052D53A /* Networker.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,8 @@
 		50FA8D121ABE06700052D53A /* StatisticViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatisticViewController.m; sourceTree = "<group>"; };
 		50FA8D141ABE0E210052D53A /* PushNoAnimationSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushNoAnimationSegue.h; sourceTree = "<group>"; };
 		50FA8D151ABE0E210052D53A /* PushNoAnimationSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushNoAnimationSegue.m; sourceTree = "<group>"; };
+		50FA8D1F1ABE597E0052D53A /* Networker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Networker.h; sourceTree = "<group>"; };
+		50FA8D201ABE597E0052D53A /* Networker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Networker.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +164,8 @@
 				50FA8D121ABE06700052D53A /* StatisticViewController.m */,
 				50FA8D141ABE0E210052D53A /* PushNoAnimationSegue.h */,
 				50FA8D151ABE0E210052D53A /* PushNoAnimationSegue.m */,
+				50FA8D1F1ABE597E0052D53A /* Networker.h */,
+				50FA8D201ABE597E0052D53A /* Networker.m */,
 				50FA8CCD1ABDC2130052D53A /* Main.storyboard */,
 				50FA8CD01ABDC2130052D53A /* Images.xcassets */,
 				50FA8CD21ABDC2130052D53A /* LaunchScreen.xib */,
@@ -300,6 +305,7 @@
 				50FA8CCC1ABDC2130052D53A /* ViewController.m in Sources */,
 				50FA8CC91ABDC2130052D53A /* AppDelegate.m in Sources */,
 				50FA8CC61ABDC2130052D53A /* main.m in Sources */,
+				50FA8D211ABE597E0052D53A /* Networker.m in Sources */,
 				50FA8D131ABE06700052D53A /* StatisticViewController.m in Sources */,
 				50FA8D031ABDD5DD0052D53A /* HelloViewController.m in Sources */,
 				50FA8D0A1ABDDC140052D53A /* OverviewViewController.m in Sources */,
