@@ -19,12 +19,18 @@ NSString *host = @"http://169.254.85.33:5000/%@";
 
 + (void)startRide
 {
-    [self dataFromUrl:[NSString stringWithFormat:host, @"startRide"]];
+    [self dataFromUrl:[NSString stringWithFormat:host, @"ride/start"]];
 }
 
-+ (void)endRide
++ (NSDictionary *)endRide
 {
-    [self dataFromUrl:[NSString stringWithFormat:host, @"endRide"]];
+    NSData *data = [self dataFromUrl:[NSString stringWithFormat:host, @"ride/end"]];
+
+    NSError* error;
+    NSDictionary *stats = [NSJSONSerialization JSONObjectWithData:data
+                                                       options:NSJSONReadingMutableContainers
+                                                         error:&error];
+    return stats;
 }
 
 + (NSArray *)eventUpdate

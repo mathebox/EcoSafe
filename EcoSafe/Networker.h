@@ -11,7 +11,7 @@
 @interface Networker : NSObject
 
 + (void)startRide;
-+ (void)endRide;
++ (NSDictionary *)endRide;
 
 + (NSArray *)eventUpdate;
 

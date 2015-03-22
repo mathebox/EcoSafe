@@ -109,7 +109,6 @@ typedef NS_ENUM(NSUInteger, EventType) {
 
 - (IBAction)endDrive:(id)sender {
     [self.timer invalidate];
-    [Networker endRide];
     [self performSegueWithIdentifier:@"showDriveStats" sender:self];
 }
 
@@ -124,8 +123,6 @@ typedef NS_ENUM(NSUInteger, EventType) {
     } else {
         self.lastEvents = @[type];
     }
-
-    NSLog(@"%@", self.lastEvents);
 
     dispatch_async(dispatch_get_main_queue(), ^{
         [self updateViews];
