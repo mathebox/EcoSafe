@@ -8,7 +8,7 @@
 
 #import "Networker.h"
 
-NSString *host = @"http://169.254.85.33:5000/%@";
+NSString *host = @"http://172.30.1.139:5000/%@";
 
 @implementation Networker
 

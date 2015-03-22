@@ -64,7 +64,7 @@ typedef NS_ENUM(NSUInteger, EventType) {
 //        UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
 //        UIGraphicsEndImageContext();
 //        UIColor *color = [UIColor colorWithPatternImage:image];
-
+        view.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.75];
         view.hidden = YES;
     }];
 
