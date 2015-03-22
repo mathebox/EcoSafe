@@ -43,6 +43,8 @@ typedef NS_ENUM(NSUInteger, EventType) {
 
 @property (strong, nonatomic) NSTimer *timer;
 
+@property (strong, nonatomic) IBOutlet UIImageView *additionalView;
+
 @end
 
 @implementation DriveViewController
@@ -82,12 +84,26 @@ typedef NS_ENUM(NSUInteger, EventType) {
     NSArray *updates = [Networker eventUpdate];
 //    NSLog(@"%@, %@", updates, [updates[0] class]);
 
+    int additonal = 0;
+
     for (int i = 0; i < updates.count; i++) {
         NSNumber *update = updates[i];
         if (update.boolValue) {
             NSLog(@"YES %d", i);
+            if (i == 2 || i == 6 || i == 7) {
+                additonal = MAX(additonal, i);
+            } else {
             [self newEvent:[NSNumber numberWithInt:i]];
+            }
         }
+    }
+
+    if (additonal == 0) {
+        self.additionalView.hidden = YES;
+    } else {
+        self.additionalView.image = [UIImage imageNamed:[self imageNameForEventType:[NSNumber numberWithInt:additonal]]];
+        self.additionalView.hidden = FALSE;
+
     }
 }
 
