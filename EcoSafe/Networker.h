@@ -14,5 +14,6 @@
 + (NSDictionary *)endRide;
 
 + (NSArray *)eventUpdate;
++ (void)tweet;
 
 @end

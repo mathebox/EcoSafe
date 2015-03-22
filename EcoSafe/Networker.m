@@ -44,4 +44,9 @@ NSString *host = @"http://169.254.85.33:5000/%@";
     return updates;
 }
 
++ (void)tweet
+{
+    [self dataFromUrl:[NSString stringWithFormat:host, @"tweet"]];
+}
+
 @end

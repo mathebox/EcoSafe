@@ -8,11 +8,14 @@
 
 #import "DriveStatViewController.h"
 #import "Networker.h"
+#import "AlternativesViewController.h"
 
 @interface DriveStatViewController ()
 @property (strong, nonatomic) IBOutlet UILabel *driveRank;
 @property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activity;
 @property (strong, nonatomic) IBOutlet UIImageView *overallBadge;
+
+@property (strong, nonatomic) NSArray *alternatives;
 
 @end
 
@@ -48,6 +51,7 @@
 
         self.driveRank.text = [stats objectForKey:@"currentGrade"];
         self.overallBadge.image = [UIImage imageNamed:[self imageNameForBadge:[stats objectForKey:@"overallGrade"]]];
+        self.alternatives = [stats objectForKey:@"allRyderCompare"];
     });
 }
 
@@ -70,6 +74,20 @@
     [self performSegueWithIdentifier:@"toOverview" sender:self];
 }
 
+- (IBAction)showAlternatives:(id)sender {
+    [self performSegueWithIdentifier:@"alternatives" sender:self];
+}
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"alternatives"]) {
+        AlternativesViewController *avc = (AlternativesViewController *)segue.destinationViewController;
+        avc.alternatives = self.alternatives;
+    }
+}
+
+- (IBAction)tweet:(id)sender {
+    [Networker tweet];
+}
 
 @end
