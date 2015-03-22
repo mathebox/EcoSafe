@@ -105,23 +105,21 @@ typedef NS_ENUM(NSUInteger, EventType) {
 - (NSString *)titleForEventType:(NSNumber *)type
 {
     if (type.integerValue == 0) {
-        return @"Accelerate";
+        return @"Rough acceleration";
     } else if (type.integerValue == 1) {
-        return @"Brake";
+        return @"Rough brake";
     } else if (type.integerValue == 2) {
-        return @"Idle";
+        return @"Motor on while parking";
     } else if (type.integerValue == 3) {
-        return @"Distance";
+        return @"Too close to next driver";
     } else if (type.integerValue == 4) {
-        return @"Turn";
+        return @"Rough turn";
     } else if (type.integerValue == 5) {
-        return @"Speed";
+        return @"Exceeding the speed limit";
     } else if (type.integerValue == 6) {
-        return @"Jam";
+        return @"Stuck in traffic jam";
     } else if (type.integerValue == 7) {
-        return @"Brake";
-    } else if (type.integerValue == 8) {
-        return @"Slow";
+        return @"Too slow driving speed";
     } else {
         return @"";
     }
@@ -144,8 +142,6 @@ typedef NS_ENUM(NSUInteger, EventType) {
     } else if (type.integerValue == 6) {
         return @"steer.png";
     } else if (type.integerValue == 7) {
-        return @"steer.png";
-    } else if (type.integerValue == 8) {
         return @"steer.png";
     } else {
         return @"";
