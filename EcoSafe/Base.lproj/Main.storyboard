@@ -104,8 +104,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QqW-cr-g0n">
                                 <rect key="frame" x="16" y="171" width="568" height="257"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, Tobi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cLg-he-msm">
-                                        <rect key="frame" x="8" y="216" width="552" height="30"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, Max" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cLg-he-msm">
+                                        <rect key="frame" x="8" y="220" width="552" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="mWl-Ud-Ddt"/>
                                         </constraints>
@@ -113,7 +113,7 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tobi.png" translatesAutoresizingMaskIntoConstraints="NO" id="ABn-IY-ZkA">
+                                    <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="ABn-IY-ZkA">
                                         <rect key="frame" x="184" y="8" width="200" height="200"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="Bdz-2p-Gpr"/>
@@ -125,10 +125,10 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="257" id="0Xq-0u-aIP"/>
                                     <constraint firstItem="ABn-IY-ZkA" firstAttribute="top" secondItem="QqW-cr-g0n" secondAttribute="top" constant="8" id="CHs-hL-386"/>
-                                    <constraint firstItem="cLg-he-msm" firstAttribute="top" secondItem="QqW-cr-g0n" secondAttribute="top" constant="216" id="MUY-Vg-vii"/>
                                     <constraint firstItem="cLg-he-msm" firstAttribute="leading" secondItem="QqW-cr-g0n" secondAttribute="leading" constant="8" id="bNL-qz-YVB"/>
                                     <constraint firstAttribute="trailing" secondItem="cLg-he-msm" secondAttribute="trailing" constant="8" id="dFN-L8-pH7"/>
                                     <constraint firstAttribute="centerX" secondItem="ABn-IY-ZkA" secondAttribute="centerX" id="mGW-am-hWw"/>
+                                    <constraint firstItem="cLg-he-msm" firstAttribute="top" secondItem="ABn-IY-ZkA" secondAttribute="bottom" constant="12" id="r2X-6M-DTD"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -362,7 +362,7 @@
                                     <action selector="toOverview:" destination="uFD-aD-qTw" eventType="touchUpInside" id="gZT-zh-G4Z"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tobi.png" translatesAutoresizingMaskIntoConstraints="NO" id="W6q-WI-RUb">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="W6q-WI-RUb">
                                 <rect key="frame" x="25" y="25" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="d21-10-tuz"/>
@@ -376,12 +376,6 @@
                                     <constraint firstAttribute="width" constant="125" id="ty4-bi-Zgm"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tobi" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AOd-Bv-4FJ">
-                                <rect key="frame" x="292" y="35" width="36.5" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level: Blind Granny" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GgZ-hn-uDt">
                                 <rect key="frame" x="292" y="67" width="149.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -397,6 +391,12 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Worldscore: #9283" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DI4-pI-ear">
                                 <rect key="frame" x="292" y="123" width="144" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AOd-Bv-4FJ">
+                                <rect key="frame" x="292" y="35" width="39" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -800,6 +800,6 @@
         <image name="car" width="200" height="100"/>
         <image name="car_bg" width="2801" height="1498"/>
         <image name="statistic" width="200" height="100"/>
-        <image name="tobi.png" width="500" height="500"/>
+        <image name="user" width="500" height="500"/>
     </resources>
 </document>
