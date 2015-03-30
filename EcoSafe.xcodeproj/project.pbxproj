@@ -47,7 +47,7 @@
 
 /* Begin PBXFileReference section */
 		4EFD793E1ABE35AB0004B814 /* MySpinServerSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MySpinServerSDK.framework; path = framework/MySpinServerSDK.framework; sourceTree = "<group>"; };
-		50FA8CC01ABDC2130052D53A /* EcoSafe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = EcoSafe.app; path = GREENtire.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		50FA8CC01ABDC2130052D53A /* GREENtire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GREENtire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50FA8CC41ABDC2130052D53A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50FA8CC51ABDC2130052D53A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		50FA8CC71ABDC2130052D53A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -140,7 +140,7 @@
 		50FA8CC11ABDC2130052D53A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				50FA8CC01ABDC2130052D53A /* EcoSafe.app */,
+				50FA8CC01ABDC2130052D53A /* GREENtire.app */,
 				50FA8CD91ABDC2130052D53A /* EcoSafeTests.xctest */,
 			);
 			name = Products;
@@ -220,7 +220,7 @@
 			);
 			name = EcoSafe;
 			productName = EcoSafe;
-			productReference = 50FA8CC01ABDC2130052D53A /* EcoSafe.app */;
+			productReference = 50FA8CC01ABDC2130052D53A /* GREENtire.app */;
 			productType = "com.apple.product-type.application";
 		};
 		50FA8CD81ABDC2130052D53A /* EcoSafeTests */ = {

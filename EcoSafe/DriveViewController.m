@@ -59,12 +59,16 @@ typedef NS_ENUM(NSUInteger, EventType) {
     self.titles = @[self.title1, self.title2, self.title3];
 
     [self.alertViews enumerateObjectsUsingBlock:^(UIView *view, NSUInteger idx, BOOL *stop) {
-//        UIGraphicsBeginImageContext(view.bounds.size);
-//        [[UIImage imageNamed:@"button-bg"] drawInRect:view.bounds];
-//        UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-//        UIGraphicsEndImageContext();
-//        UIColor *color = [UIColor colorWithPatternImage:image];
-        view.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.75];
+        NSLog(@"frame %f %f %f %f" , view.frame.origin.x, view.frame.origin.y, view.frame.size.width, view.frame.size.height);
+        NSLog(@"bounds %f %f %f %f" , view.bounds.origin.x, view.bounds.origin.y, view.bounds.size.width, view.bounds.size.height);
+        CGRect b = CGRectMake(0, 0, view.bounds.size.width*0.94, view.bounds.size.height*0.48);
+        UIGraphicsBeginImageContext(view.frame.size);
+        [[[UIImage imageNamed:@"button-bg-2"] resizableImageWithCapInsets:UIEdgeInsetsMake(8, 8, 8, 8)] drawInRect:b];
+        UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        UIColor *color = [UIColor colorWithPatternImage:image];
+        view.backgroundColor = color;
+//        view.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.75];
         view.hidden = YES;
     }];
 
@@ -101,6 +105,7 @@ typedef NS_ENUM(NSUInteger, EventType) {
     if (additonal == 0) {
         self.additionalView.hidden = YES;
     } else {
+        self.additionalView.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.75];
         self.additionalView.image = [UIImage imageNamed:[self imageNameForEventType:[NSNumber numberWithInt:additonal]]];
         self.additionalView.hidden = FALSE;
 

@@ -104,7 +104,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QqW-cr-g0n">
                                 <rect key="frame" x="16" y="171" width="568" height="257"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, Max" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cLg-he-msm">
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello Max!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cLg-he-msm">
                                         <rect key="frame" x="8" y="220" width="552" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="mWl-Ud-Ddt"/>
@@ -719,14 +719,26 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mh6-aB-Ild">
+                                        <rect key="frame" x="8" y="59" width="264" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="u6i-Cv-rPv"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="mh6-aB-Ild" firstAttribute="leading" secondItem="F2f-I3-Uu4" secondAttribute="leading" constant="8" id="9TE-Un-mX2"/>
+                                    <constraint firstItem="JTz-6I-uWd" firstAttribute="top" secondItem="mh6-aB-Ild" secondAttribute="bottom" constant="8" id="BQh-Tq-Qxw"/>
                                     <constraint firstAttribute="height" constant="200" id="Mhy-xN-FiQ"/>
                                     <constraint firstAttribute="centerY" secondItem="JTz-6I-uWd" secondAttribute="centerY" id="Wm2-j6-3lz"/>
                                     <constraint firstAttribute="width" secondItem="F2f-I3-Uu4" secondAttribute="height" multiplier="7:5" id="a34-7H-eft"/>
                                     <constraint firstAttribute="trailing" secondItem="JTz-6I-uWd" secondAttribute="trailing" constant="8" id="bQH-v2-Fnx"/>
                                     <constraint firstItem="JTz-6I-uWd" firstAttribute="leading" secondItem="F2f-I3-Uu4" secondAttribute="leading" constant="8" id="dcU-uP-xfa"/>
+                                    <constraint firstAttribute="trailing" secondItem="mh6-aB-Ild" secondAttribute="trailing" constant="8" id="gii-5h-19R"/>
                                     <constraint firstAttribute="centerX" secondItem="JTz-6I-uWd" secondAttribute="centerX" id="oeh-8f-bjt"/>
                                 </constraints>
                                 <variation key="default">
@@ -818,6 +830,7 @@
                         <outlet property="activity" destination="oNA-eC-RrS" id="Umb-Yr-5HG"/>
                         <outlet property="driveRank" destination="JTz-6I-uWd" id="9sk-Df-tUP"/>
                         <outlet property="overallBadge" destination="Q7F-pW-U8s" id="I0Q-lG-boJ"/>
+                        <outlet property="scoreLabel" destination="mh6-aB-Ild" id="sJ8-6U-Jhh"/>
                         <segue destination="IlB-6e-z7f" kind="unwind" identifier="toOverview" unwindAction="unwindToOverview:" id="WXv-1M-z5Y"/>
                         <segue destination="q8e-xK-5qR" kind="custom" identifier="alternatives" customClass="PushNoAnimationSegue" id="bxe-J8-Qvb"/>
                     </connections>

@@ -14,6 +14,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *driveRank;
 @property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activity;
 @property (strong, nonatomic) IBOutlet UIImageView *overallBadge;
+@property (strong, nonatomic) IBOutlet UILabel *scoreLabel;
 
 @property (strong, nonatomic) NSArray *alternatives;
 
@@ -32,7 +33,7 @@
 
     [self.activity startAnimating];
 
-    NSTimer *timer = [NSTimer timerWithTimeInterval:1.0
+    NSTimer *timer = [NSTimer timerWithTimeInterval:0.0
                                          target:self
                                        selector:@selector(requestStats)
                                        userInfo:nil
@@ -49,6 +50,7 @@
         [self.activity stopAnimating];
         self.activity.hidden = YES;
 
+        self.scoreLabel.text = @"Score";
         self.driveRank.text = [stats objectForKey:@"currentGrade"];
         self.overallBadge.image = [UIImage imageNamed:[self imageNameForBadge:[stats objectForKey:@"overallGrade"]]];
         self.alternatives = [stats objectForKey:@"allRyderCompare"];
@@ -87,6 +89,18 @@
 }
 
 - (IBAction)tweet:(id)sender {
+    NSTimer *timer = [NSTimer timerWithTimeInterval:0.0
+                                             target:self
+                                           selector:@selector(_tweet)
+                                           userInfo:nil
+                                            repeats:NO];
+    NSRunLoop *runner = [NSRunLoop currentRunLoop];
+    [runner addTimer:timer forMode: NSDefaultRunLoopMode];
+
+}
+
+- (void)_tweet
+{
     [Networker tweet];
 }
 
